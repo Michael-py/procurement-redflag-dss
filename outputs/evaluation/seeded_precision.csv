@@ -1,0 +1,5 @@
+strategy,p@25,p@50,p@100,p@200
+System (rules + anomaly),1.0,1.0,1.0,0.5
+System (rules only),1.0,1.0,1.0,0.5
+Largest contract first,0.04,0.02,0.04,0.055
+Random selection (mean of 1000 draws),0.05124,0.051680000000000004,0.05117000000000001,0.05048500000000001

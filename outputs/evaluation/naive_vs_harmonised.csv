@@ -1,0 +1,26 @@
+source,indicator,naive_flagged,system_flagged,naive_only,system_only,note
+nigeria_anambra_state,single_bidder,13,14,0,1,naive: procurementMethod in open/selective/limited and one tenderer
+nigeria_ebonyi_state,single_bidder,119,119,0,0,naive: procurementMethod in open/selective/limited and one tenderer
+nigeria_osun_state,single_bidder,2,2,0,0,naive: procurementMethod in open/selective/limited and one tenderer
+nigeria_plateau_state,single_bidder,0,0,0,0,naive: procurementMethod in open/selective/limited and one tenderer
+nigeria_portal,single_bidder,7728,5817,1911,0,naive: procurementMethod in open/selective/limited and one tenderer
+nigeria_anambra_state,short_period,45,58,0,13,naive: procurementMethod 'open' and published durationInDays below the open-bidding minimum
+nigeria_ebonyi_state,short_period,366,359,7,0,naive: procurementMethod 'open' and published durationInDays below the open-bidding minimum
+nigeria_osun_state,short_period,0,23,0,23,naive: procurementMethod 'open' and published durationInDays below the open-bidding minimum
+nigeria_plateau_state,short_period,0,15,0,15,naive: procurementMethod 'open' and published durationInDays below the open-bidding minimum
+nigeria_portal,short_period,5481,3670,1811,0,naive: procurementMethod 'open' and published durationInDays below the open-bidding minimum
+nigeria_anambra_state,non_competitive,48,47,1,0,naive: procurementMethod equals 'direct'
+nigeria_ebonyi_state,non_competitive,14,14,0,0,naive: procurementMethod equals 'direct'
+nigeria_osun_state,non_competitive,34,34,0,0,naive: procurementMethod equals 'direct'
+nigeria_plateau_state,non_competitive,4,4,0,0,naive: procurementMethod equals 'direct'
+nigeria_portal,non_competitive,0,1853,0,1853,naive: procurementMethod equals 'direct'
+nigeria_anambra_state,award_close_to_estimate,0,0,0,0,"naive: award within tolerance of tender.value, including exact copies"
+nigeria_ebonyi_state,award_close_to_estimate,0,0,0,0,"naive: award within tolerance of tender.value, including exact copies"
+nigeria_osun_state,award_close_to_estimate,0,0,0,0,"naive: award within tolerance of tender.value, including exact copies"
+nigeria_plateau_state,award_close_to_estimate,63,1,62,0,"naive: award within tolerance of tender.value, including exact copies"
+nigeria_portal,award_close_to_estimate,15539,0,15539,0,"naive: award within tolerance of tender.value, including exact copies"
+nigeria_anambra_state,supplier_concentration,11,11,0,0,"naive: suppliers grouped by published identifier, blank identifiers included"
+nigeria_ebonyi_state,supplier_concentration,9,9,0,0,"naive: suppliers grouped by published identifier, blank identifiers included"
+nigeria_osun_state,supplier_concentration,4,4,0,0,"naive: suppliers grouped by published identifier, blank identifiers included"
+nigeria_plateau_state,supplier_concentration,2,2,0,0,"naive: suppliers grouped by published identifier, blank identifiers included"
+nigeria_portal,supplier_concentration,467,57,414,4,"naive: suppliers grouped by published identifier, blank identifiers included"

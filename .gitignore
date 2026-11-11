@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.tmp
+.env
+
+# Built by `python -m redflag run`; rebuild it rather than committing it (about 77 MB)
+data/warehouse.sqlite
+*.sqlite-journal

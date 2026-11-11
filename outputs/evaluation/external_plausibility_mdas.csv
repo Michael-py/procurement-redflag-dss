@@ -1,0 +1,41 @@
+buyer_key,mda,issues_total,issues_procurement,contracts,flagged,mean_risk,flag_rate
+nigeria_portal:NG-BPP-BPP-NOC-111052001,"New Partnership for Africa's Development, Abuja",31,8,16,16,0.335839875,1.0
+nigeria_portal:NG-BPP-BPP-NOC-156003001,"Nigerian Communication Satellite Limited, Abuja",11,2,24,24,0.3235607916666667,1.0
+nigeria_portal:NG-BPP-BPP-NOC-232008008,"Nigerian Midstream and Downstream Petroleum Regulatory Authority, Abuja",3,0,14,14,0.343587,1.0
+nigeria_portal:NG-BPP-BPP-NOC-161007001,"Federal Road Safety Corps, Abuja",6,0,20,20,0.31992335,1.0
+nigeria_portal:NG-BPP-BPP-NOC-123009001,"Nigerian Press Council, Abuja",4,3,23,22,0.32231004347826087,0.9565217391304348
+nigeria_portal:NG-BPP-BPP-NOC-215014001,"Cocoa Research Institute of Nigeria, Ibadan, Oyo State",5,0,55,52,0.2893192727272727,0.9454545454545454
+nigeria_portal:NG-BPP-BPP-NOC-124002001,"Nigerian Correctional Service, Abuja",6,3,241,226,0.24912121576763485,0.9377593360995851
+nigeria_portal:NG-BPP-BPP-NOC-231010001,"National Power Training Institute, Abuja",11,1,43,38,0.26655820930232554,0.8837209302325582
+nigeria_portal:NG-BPP-BPP-NOC-229031003,"Nigerian College of Aviation Technology, Zaria, Kaduna State",5,2,8,7,0.300222,0.875
+nigeria_portal:NG-BPP-BPP-NOC-123006001,"Voice of Nigeria, Abuja",1,0,8,7,0.323757,0.875
+nigeria_portal:NG-BPP-BPP-NOC-119009001,"Nigerians in Diaspora Commission, Abuja",13,7,15,13,0.28776773333333333,0.8666666666666667
+nigeria_portal:NG-BPP-BPP-NOC-31,"Federal Ministry of Aviation and Aerospace Development, Abuja",3,2,21,18,0.21421290476190477,0.8571428571428571
+nigeria_portal:NG-BPP-BPP-NOC-3,"Federal Ministry of Agriculture and Food Security, Abuja",9,4,294,250,0.2528009523809524,0.8503401360544217
+nigeria_portal:NG-BPP-BPP-NOC-220002001,"Debt Management Office, Abuja",5,1,10,8,0.2277593,0.8
+nigeria_portal:NG-BPP-BPP-NOC-521027033,"Federal Medical Centre, Birnin Kebbi, Kebbi State",1,0,43,34,0.27099902325581393,0.7906976744186046
+nigeria_portal:NG-BPP-BPP-NOC-232005001,"Nigerian Upstream Petroleum Regulatory Commission, Abuja",2,0,343,266,0.23052919241982506,0.7755102040816326
+nigeria_portal:NG-BPP-BPP-NOC-517021017,"Federal University of Technology, Akure",2,0,112,86,0.2621863482142857,0.7678571428571429
+nigeria_portal:NG-BPP-BPP-NOC-119006001,"Institute of Peace and Conflict Resolution, Abuja",11,4,159,121,0.17055464150943397,0.7610062893081762
+nigeria_portal:NG-BPP-BPP-NOC-517021039,"Federal University, Gashua, Yobe State",1,0,70,53,0.24635017142857144,0.7571428571428571
+nigeria_portal:NG-BPP-BPP-NOC-517021002,"University of Lagos, Akoka",25,8,29,21,0.21183903448275862,0.7241379310344828
+nigeria_portal:NG-BPP-BPP-NOC-521026007,"University Teaching Hospital Ilorin, Kwara State",3,2,56,38,0.24354139285714285,0.6785714285714286
+nigeria_portal:NG-BPP-BPP-NOC-521026011,"University of Maiduguri Teaching Hospital, Maiduguri, Borno State",2,0,34,23,0.10673941176470589,0.6764705882352942
+nigeria_portal:NG-BPP-BPP-NOC-517022001,"Division of Agricultural College, Zaria",1,0,12,8,0.14583958333333333,0.6666666666666666
+nigeria_portal:NG-BPP-BPP-NOC-521026005,"University of Benin Teaching Hospital, Benin, Edo State",1,1,96,61,0.16581723958333333,0.6354166666666666
+nigeria_portal:NG-BPP-BPP-NOC-125008001,"Bureau of Public Service Reforms, Abuja",3,1,19,12,0.24271984210526318,0.631578947368421
+nigeria_portal:NG-BPP-BPP-NOC-228044001,"National Research Institute for Chemical Technology Zaria, Kaduna State",5,4,62,36,0.15927120967741934,0.5806451612903226
+nigeria_portal:NG-BPP-BPP-NOC-517021020,"University of I-Jyo, Akwa Ibom State",4,0,7,4,0.13095414285714285,0.5714285714285714
+nigeria_portal:NG-BPP-BPP-NOC-521027019,"Federal Medical Centre, Abeokuta, Ogun State",5,1,7,3,0.13616942857142858,0.42857142857142855
+nigeria_portal:NG-BPP-BPP-NOC-517021025,"National Mathematical Centre, Abuja",6,4,70,28,0.12401109999999999,0.4
+nigeria_portal:NG-BPP-BPP-NOC-232001001,"Ministry of Petroleum Resources Headquarters, Abuja",4,0,33,12,0.17394263636363635,0.36363636363636365
+nigeria_portal:NG-BPP-BPP-NOC-517021010,"University of Abuja, Abuja",2,0,212,71,0.09867013679245283,0.33490566037735847
+nigeria_portal:NG-BPP-BPP-NOC-161005001,"National Identity Management Commission, Abuja",11,0,12,4,0.09973233333333333,0.3333333333333333
+nigeria_portal:NG-BPP-BPP-NOC-215008001,"Nigerian Institute for Oil Palm Research, Edo State",3,0,6,2,0.12948016666666667,0.3333333333333333
+nigeria_portal:NG-BPP-BPP-NOC-514001001,"Federal Ministry of Women Affairs and Social Development, Abuja",5,0,9,3,0.12172655555555556,0.3333333333333333
+nigeria_portal:NG-BPP-BPP-NOC-521026016,"Abubakar Tafawa Balewa Teaching Hospital, Bauchi",1,0,42,10,0.10137311904761906,0.23809523809523808
+nigeria_portal:NG-BPP-BPP-NOC-215059001,"National Agricultural Land Development Authority, Abuja",9,6,32,5,0.06630428125,0.15625
+nigeria_portal:NG-BPP-BPP-NOC-521048002,"National Obstetrics and Fistula Centre, Ningi Bauchi State",2,0,34,5,0.09057594117647058,0.14705882352941177
+nigeria_portal:NG-BPP-BPP-NOC-553001001,"Federal Ministry of Humanitarian Affairs, Disaster Management and Social Development, Abuja",7,3,205,21,0.07688301951219512,0.1024390243902439
+nigeria_portal:NG-BPP-BPP-NOC-238002001,"Nigerian Institute of Social and Economic Research, Ibadan",17,7,20,0,0.0803528,0.0
+nigeria_portal:NG-BPP-BPP-NOC-517021029,"Federal University, Oye-Ekiti",2,0,17,0,0.06552794117647058,0.0

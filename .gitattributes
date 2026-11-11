@@ -1,0 +1,2 @@
+# Shell scripts run inside the Linux PostgreSQL container: keep LF line endings.
+*.sh text eol=lf

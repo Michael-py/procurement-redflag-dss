@@ -1,0 +1,10 @@
+[server]
+address = "localhost"
+headless = true
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"

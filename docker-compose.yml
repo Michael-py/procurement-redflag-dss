@@ -1,0 +1,32 @@
+# PostgreSQL for the Procurement Red-Flag DSS warehouse.
+#
+#   docker compose up -d                 start the database
+#   python -m redflag pg-load            mirror data/warehouse.sqlite into it
+#   docker compose down                  stop it (data is kept in the volume)
+#   docker compose down -v               stop it and delete the data
+#
+# Credentials come from .env (copy .env.example). The port is published on
+# 127.0.0.1 only, so the database is not reachable from the network.
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: redflag-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-redflag}
+      POSTGRES_USER: ${POSTGRES_USER:-redflag}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      READER_PASSWORD: ${READER_PASSWORD:?set READER_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - redflag_pgdata:/var/lib/postgresql/data
+      - ./docker/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-redflag} -d ${POSTGRES_DB:-redflag}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  redflag_pgdata:

@@ -1,0 +1,205 @@
+# Configuration for the Procurement Red-Flag DSS.
+# Thresholds, weights, method mappings and source coverage live here so that
+# behaviour can be changed without editing code (NFR5). Every run records the
+# SHA-256 of this file next to the SHA-256 of each input file (NFR3).
+
+[paths]
+raw_dir = "data/raw"
+warehouse = "data/warehouse.sqlite"
+output_dir = "outputs"
+audit_findings = "data/reference/oaugf_2024_procurement_findings.csv"
+
+[run]
+# Date the bulk files were retrieved from the OCP Data Registry. Dates later
+# than this are treated as implausible.
+retrieval_date = "2026-10-12"
+min_plausible_date = "2000-01-01"
+default_currency = "NGN"
+
+# ---------------------------------------------------------------- sources
+# Adding a portal means adding one [[sources]] block (NFR7).
+#   method_code_trusted: whether tender.procurementMethod carries information.
+#     NOCOPO hard-codes it to "open", so it is ignored there.
+#   blank_id_patterns: identifiers that are only a scheme prefix.
+[[sources]]
+id = "nigeria_portal"
+label = "NOCOPO / BPP (federal)"
+level = "federal"
+file = "nigeria_portal.jsonl.gz"
+registry_publication = 64
+method_code_trusted = false
+blank_id_patterns = ["^NG-BPP-$"]
+
+[[sources]]
+id = "nigeria_anambra_state"
+label = "Anambra State"
+level = "state"
+file = "nigeria_anambra_state.jsonl.gz"
+registry_publication = 127
+method_code_trusted = true
+blank_id_patterns = ["^NG-CAC-$", "^NG-TIN-$"]
+
+[[sources]]
+id = "nigeria_ebonyi_state"
+label = "Ebonyi State"
+level = "state"
+file = "nigeria_ebonyi_state.jsonl.gz"
+registry_publication = 86
+method_code_trusted = true
+blank_id_patterns = ["^NG-CAC-$", "^NG-TIN-$"]
+
+[[sources]]
+id = "nigeria_osun_state"
+label = "Osun State"
+level = "state"
+file = "nigeria_osun_state.jsonl.gz"
+registry_publication = 118
+method_code_trusted = true
+blank_id_patterns = ["^NG-CAC-$", "^NG-TIN-$"]
+
+[[sources]]
+id = "nigeria_plateau_state"
+label = "Plateau State"
+level = "state"
+file = "nigeria_plateau_state.jsonl.gz"
+registry_publication = 125
+method_code_trusted = true
+blank_id_patterns = []
+
+# ------------------------------------------------------- method vocabulary
+# Controlled vocabulary of Nigerian procurement methods and the class each
+# belongs to. Classes:
+#   competitive_open        - open advertised bidding
+#   competitive_restricted  - invited bidders, still expected to compete
+#   quotation               - shopping / request for quotations
+#   non_competitive         - a single supplier is expected
+[methods.vocabulary]
+international_competitive_bidding = "competitive_open"
+national_competitive_bidding = "competitive_open"
+open_tendering = "competitive_open"
+selective_tendering = "competitive_restricted"
+request_for_quotation = "quotation"
+national_shopping = "quotation"
+direct_procurement = "non_competitive"
+sole_source = "non_competitive"
+emergency = "non_competitive"
+repeat_procurement = "non_competitive"
+direct_labour = "non_competitive"
+
+# Rules applied in order to the lower-cased free text of
+# tender.procurementMethodDetails. First match wins.
+[[methods.detail_rules]]
+pattern = "international competitive"
+method = "international_competitive_bidding"
+[[methods.detail_rules]]
+pattern = "national competitive"
+method = "national_competitive_bidding"
+[[methods.detail_rules]]
+pattern = "direct labour"
+method = "direct_labour"
+[[methods.detail_rules]]
+pattern = "sole source|single source"
+method = "sole_source"
+[[methods.detail_rules]]
+pattern = "emergency"
+method = "emergency"
+[[methods.detail_rules]]
+pattern = "repeat"
+method = "repeat_procurement"
+[[methods.detail_rules]]
+pattern = "quotation"
+method = "request_for_quotation"
+[[methods.detail_rules]]
+pattern = "shopping"
+method = "national_shopping"
+[[methods.detail_rules]]
+pattern = "^\\s*direct|direct (procurement|procedure|tender|award)"
+method = "direct_procurement"
+[[methods.detail_rules]]
+pattern = "selective|selected|restricted|were invited|limited"
+method = "selective_tendering"
+[[methods.detail_rules]]
+pattern = "open|competitive"
+method = "open_tendering"
+
+# Fallback from the OCDS procurementMethod code list, used only for sources
+# where method_code_trusted = true.
+[methods.code_map]
+open = "open_tendering"
+selective = "selective_tendering"
+limited = "selective_tendering"
+direct = "direct_procurement"
+
+# --------------------------------------------------------------- suppliers
+[suppliers]
+# Tokens dropped when normalising a supplier name for matching.
+legal_form_tokens = ["LTD", "LIMITED", "PLC", "NIG", "NIGERIA", "NIGERIAN", "COMPANY", "CO", "ENTERPRISES", "ENTERPRISE", "ENT", "VENTURES", "VENTURE", "INTERNATIONAL", "INTL", "INT", "MESSRS", "MS", "AND", "THE", "RC"]
+min_name_length = 4
+
+# -------------------------------------------------------------- indicators
+[indicators.single_bidder]
+weight = 0.30
+applies_to_classes = ["competitive_open", "competitive_restricted"]
+
+[indicators.short_period]
+weight = 0.20
+# Minimum submission period in days by method class. Section 25(2) of the
+# Public Procurement Act 2007 requires invitations for national and
+# international competitive bidding to be advertised not less than six weeks
+# before the bid deadline. A period below `severe_days` scores 1.0; a period
+# between `severe_days` and `minimum_days` scores `moderate_score`.
+moderate_score = 0.5
+# Periods longer than this are treated as data errors, not as long tenders.
+max_plausible_days = 365
+[indicators.short_period.minimum_days]
+competitive_open = 42
+competitive_restricted = 14
+quotation = 7
+[indicators.short_period.severe_days]
+competitive_open = 14
+competitive_restricted = 7
+quotation = 3
+
+[indicators.non_competitive]
+weight = 0.15
+
+[indicators.supplier_concentration]
+weight = 0.20
+# Flag a contract when its supplier holds at least `share_threshold` of the
+# buyer's total awarded value, the buyer has at least `min_buyer_awards`
+# awards to at least `min_buyer_suppliers` resolved suppliers, and the
+# supplier has at least `min_pair_awards` awards from that buyer.
+share_threshold = 0.30
+min_buyer_awards = 10
+min_buyer_suppliers = 3
+min_pair_awards = 2
+
+[indicators.award_close_to_estimate]
+weight = 0.15
+# Flag when 0 < |award - estimate| / estimate <= tolerance. An estimate
+# exactly equal to the award is treated as copied, not as a close award.
+tolerance = 0.01
+# If at least this share of a source's award-tender pairs are exactly equal,
+# the estimate field is declared unfit for the whole source.
+copied_share_unfit = 0.90
+
+[indicators.bid_level_screens]
+# Cardinal R024, R025, R036, R038. Needs bid data that no source publishes.
+weight = 0.0
+
+# ----------------------------------------------------------------- fitness
+[fitness]
+# A source's numberOfTenderers is reported as "suspected default" when one
+# value above 1 accounts for at least this share of its tenders.
+default_value_share = 0.50
+
+# ----------------------------------------------------------------- anomaly
+[anomaly]
+enabled = true
+weight = 0.10
+n_estimators = 200
+random_state = 20261012
+
+# ------------------------------------------------------------ prioritise
+[prioritisation]
+watchlist_size = 500

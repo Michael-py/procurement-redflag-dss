@@ -1,0 +1,7 @@
+source,indicator,flagged,clear,not_applicable,non_computable,contracts,flag_rate,fitness
+synthetic_demo,award_close_to_estimate,100,1900,0,0,2000,0.05,1.0
+synthetic_demo,bid_level_screens,0,0,0,2000,2000,,0.0
+synthetic_demo,non_competitive,216,1784,0,0,2000,0.108,1.0
+synthetic_demo,short_period,462,1322,216,0,2000,0.2589686098654709,1.0
+synthetic_demo,single_bidder,628,1007,365,0,2000,0.38409785932721713,1.0
+synthetic_demo,supplier_concentration,0,2000,0,0,2000,0.0,1.0

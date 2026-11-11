@@ -1,0 +1,288 @@
+{
+  "config_sha256": "9b6a9b5241d84fa1712075d7b4d2a349382fa13d5b3c5c08ab13698fc495c74b",
+  "retrieval_date": "2026-10-12",
+  "sources": [
+    {
+      "source": "nigeria_portal",
+      "label": "NOCOPO / BPP (federal)",
+      "level": "federal",
+      "file": "nigeria_portal.jsonl.gz",
+      "sha256": "89633fdf074a0e396f526bc3747c250866353401e44d99585641c220d4530c46",
+      "bytes": 14226929,
+      "lines": 98866,
+      "accepted": 98866,
+      "rejected": 0
+    },
+    {
+      "source": "nigeria_anambra_state",
+      "label": "Anambra State",
+      "level": "state",
+      "file": "nigeria_anambra_state.jsonl.gz",
+      "sha256": "12b0cf72ab4b3a0778d9635427dd45f6cee164337b7044e4d09744db91e47133",
+      "bytes": 67878,
+      "lines": 182,
+      "accepted": 182,
+      "rejected": 0
+    },
+    {
+      "source": "nigeria_ebonyi_state",
+      "label": "Ebonyi State",
+      "level": "state",
+      "file": "nigeria_ebonyi_state.jsonl.gz",
+      "sha256": "e0915d0afe908f925a2857247e0daddd4a4259249c4c1fe6422af448d7b04afa",
+      "bytes": 152943,
+      "lines": 470,
+      "accepted": 470,
+      "rejected": 0
+    },
+    {
+      "source": "nigeria_osun_state",
+      "label": "Osun State",
+      "level": "state",
+      "file": "nigeria_osun_state.jsonl.gz",
+      "sha256": "47b3fbe471104325ba614e397894dab3f35837db70ec0932ff0500cd211e2f95",
+      "bytes": 135568,
+      "lines": 492,
+      "accepted": 492,
+      "rejected": 0
+    },
+    {
+      "source": "nigeria_plateau_state",
+      "label": "Plateau State",
+      "level": "state",
+      "file": "nigeria_plateau_state.jsonl.gz",
+      "sha256": "575917aae732291187829a0a19914b7285944ba4e6f8cfbf450e2720ae6f1ef0",
+      "bytes": 25261,
+      "lines": 166,
+      "accepted": 166,
+      "rejected": 0
+    }
+  ],
+  "counts": {
+    "processes": 100176,
+    "tenders": 18935,
+    "awards": 18703,
+    "buyers": 758,
+    "suppliers": 11493,
+    "scored_contracts": 18935,
+    "validation_log_rows": 2277
+  },
+  "supplier_resolution": [
+    {
+      "source": "nigeria_anambra_state",
+      "supplier_resolution": "identifier",
+      "n": 179
+    },
+    {
+      "source": "nigeria_anambra_state",
+      "supplier_resolution": "name_match",
+      "n": 1
+    },
+    {
+      "source": "nigeria_anambra_state",
+      "supplier_resolution": "name_only",
+      "n": 1
+    },
+    {
+      "source": "nigeria_anambra_state",
+      "supplier_resolution": "unresolved",
+      "n": 1
+    },
+    {
+      "source": "nigeria_ebonyi_state",
+      "supplier_resolution": "identifier",
+      "n": 470
+    },
+    {
+      "source": "nigeria_osun_state",
+      "supplier_resolution": "identifier",
+      "n": 459
+    },
+    {
+      "source": "nigeria_osun_state",
+      "supplier_resolution": "name_match",
+      "n": 15
+    },
+    {
+      "source": "nigeria_osun_state",
+      "supplier_resolution": "name_only",
+      "n": 16
+    },
+    {
+      "source": "nigeria_osun_state",
+      "supplier_resolution": "unresolved",
+      "n": 2
+    },
+    {
+      "source": "nigeria_plateau_state",
+      "supplier_resolution": "identifier",
+      "n": 140
+    },
+    {
+      "source": "nigeria_portal",
+      "supplier_resolution": "identifier",
+      "n": 14967
+    },
+    {
+      "source": "nigeria_portal",
+      "supplier_resolution": "name_match",
+      "n": 800
+    },
+    {
+      "source": "nigeria_portal",
+      "supplier_resolution": "name_only",
+      "n": 561
+    },
+    {
+      "source": "nigeria_portal",
+      "supplier_resolution": "unresolved",
+      "n": 1091
+    }
+  ],
+  "method_mapping": [
+    {
+      "source": "nigeria_anambra_state",
+      "method_origin": "code",
+      "n": 6
+    },
+    {
+      "source": "nigeria_anambra_state",
+      "method_origin": "details",
+      "n": 172
+    },
+    {
+      "source": "nigeria_anambra_state",
+      "method_origin": "unmapped",
+      "n": 4
+    },
+    {
+      "source": "nigeria_ebonyi_state",
+      "method_origin": "code",
+      "n": 5
+    },
+    {
+      "source": "nigeria_ebonyi_state",
+      "method_origin": "details",
+      "n": 465
+    },
+    {
+      "source": "nigeria_osun_state",
+      "method_origin": "code",
+      "n": 2
+    },
+    {
+      "source": "nigeria_osun_state",
+      "method_origin": "details",
+      "n": 487
+    },
+    {
+      "source": "nigeria_osun_state",
+      "method_origin": "unmapped",
+      "n": 3
+    },
+    {
+      "source": "nigeria_plateau_state",
+      "method_origin": "code",
+      "n": 160
+    },
+    {
+      "source": "nigeria_plateau_state",
+      "method_origin": "unmapped",
+      "n": 6
+    },
+    {
+      "source": "nigeria_portal",
+      "method_origin": "details",
+      "n": 17486
+    },
+    {
+      "source": "nigeria_portal",
+      "method_origin": "unmapped",
+      "n": 139
+    }
+  ],
+  "determinism": {
+    "run1": "c940faffe5fed52bf4df9d8a21132f7756282a57e757156d5cf9abf6b3f0cfad",
+    "run2": "c940faffe5fed52bf4df9d8a21132f7756282a57e757156d5cf9abf6b3f0cfad",
+    "identical": true,
+    "indicator_results_identical": true
+  },
+  "seeded": {
+    "contracts": 2000,
+    "seeded": 100,
+    "base_rate": 0.05,
+    "seeded_all_in_top_n": true
+  },
+  "external_plausibility": [
+    {
+      "window": "2024",
+      "mdas_matched": 1,
+      "min_contracts": 5,
+      "rho_flag_rate_vs_issues_procurement": null,
+      "p_flag_rate_vs_issues_procurement": null,
+      "rho_flag_rate_vs_issues_total": null,
+      "p_flag_rate_vs_issues_total": null,
+      "rho_mean_risk_vs_issues_procurement": null,
+      "p_mean_risk_vs_issues_procurement": null,
+      "rho_mean_risk_vs_issues_total": null,
+      "p_mean_risk_vs_issues_total": null
+    },
+    {
+      "window": "2023-2024",
+      "mdas_matched": 15,
+      "min_contracts": 5,
+      "rho_flag_rate_vs_issues_procurement": 0.10518704374533915,
+      "p_flag_rate_vs_issues_procurement": 0.7090868502070237,
+      "rho_flag_rate_vs_issues_total": 0.09516929699278993,
+      "p_flag_rate_vs_issues_total": 0.7358309095508617,
+      "rho_mean_risk_vs_issues_procurement": 0.2433009687845424,
+      "p_mean_risk_vs_issues_procurement": 0.3822323547638113,
+      "rho_mean_risk_vs_issues_total": 0.1969422164374725,
+      "p_mean_risk_vs_issues_total": 0.48173196752137365
+    },
+    {
+      "window": "2022-2024",
+      "mdas_matched": 25,
+      "min_contracts": 5,
+      "rho_flag_rate_vs_issues_procurement": 0.067243156250843,
+      "p_flag_rate_vs_issues_procurement": 0.7494501609867222,
+      "rho_flag_rate_vs_issues_total": 0.14308193787086435,
+      "p_flag_rate_vs_issues_total": 0.4950447798138605,
+      "rho_mean_risk_vs_issues_procurement": 0.13624862730522422,
+      "p_mean_risk_vs_issues_procurement": 0.5160765016477211,
+      "rho_mean_risk_vs_issues_total": 0.1810504176005116,
+      "p_mean_risk_vs_issues_total": 0.38643725338592605
+    },
+    {
+      "window": "all years",
+      "mdas_matched": 40,
+      "min_contracts": 5,
+      "rho_flag_rate_vs_issues_procurement": 0.13343988998223733,
+      "p_flag_rate_vs_issues_procurement": 0.4117221143903903,
+      "rho_flag_rate_vs_issues_total": 0.1583204770146543,
+      "p_flag_rate_vs_issues_total": 0.3291996438691478,
+      "rho_mean_risk_vs_issues_procurement": 0.08408362301537262,
+      "p_mean_risk_vs_issues_procurement": 0.6059637306005256,
+      "rho_mean_risk_vs_issues_total": 0.08283153360827973,
+      "p_mean_risk_vs_issues_total": 0.61135846703509
+    }
+  ],
+  "timings_seconds": {
+    "ingest_and_flatten": 6.31,
+    "resolve_and_frame": 6.16,
+    "quality": 0.29,
+    "indicators": 1.56,
+    "anomaly": 2.19,
+    "prioritise": 2.82
+  },
+  "score_distribution": {
+    "flag_counts": {
+      "0": 8056,
+      "1": 9647,
+      "2": 1230,
+      "3": 2
+    },
+    "max_score": 0.592634,
+    "watchlist_min_score": 0.421431
+  }
+}

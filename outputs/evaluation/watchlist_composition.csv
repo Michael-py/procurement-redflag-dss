@@ -1,0 +1,4 @@
+strategy,contracts,mean_flags,share_with_2plus_flags,share_with_no_flag,share_single_bidder,distinct_buyers,total_value_ngn_bn,median_value_ngn_m
+System watchlist,500,2.004,1.0,0.0,1.0,88,190.72757184160997,39.926
+Largest contract first,500,0.814,0.088,0.274,0.11,65,4210.827891158275,1590.2531975
+Random selection,500,0.65,0.066,0.416,0.302,147,160.61984410324501,34.79303091
